@@ -6,16 +6,16 @@ app = Flask(__name__)
 # Route for the homepage
 @app.route("/")
 def index():
-    return render_template("https://fascinating-pastelito-005bf6.netlify.app/")
+    return redirect("https://fascinating-pastelito-005bf6.netlify.app/")
 
 # Route for generating random pages
 @app.route("/generate")
 def generate():
-    # List of pages to redirect to
+    # List of pages (HTML files in the 'templates' folder)
     pages = ["Bali.html", "Bintan.html", "Jogja.html"]
     # Randomly select one page
     selected_page = random.choice(pages)
-    # Redirect to the selected page
+    # Render the selected page
     return render_template(selected_page)
 
 # Run the app
