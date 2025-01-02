@@ -6,7 +6,7 @@ app = Flask(__name__)
 # Route for the homepage
 @app.route("/")
 def index():
-    return render_template("index.html")
+    return render_template("https://fascinating-pastelito-005bf6.netlify.app/")
 
 # Route for generating random pages
 @app.route("/generate")
